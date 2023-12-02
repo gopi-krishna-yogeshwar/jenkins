@@ -17,12 +17,12 @@ pipeline {
         sh 'node --version'
       }
     }
-    stage('Flask') {
+    stage('Django') {
       agent {
-        docker { image 'gopikrishnayogeshwar/flask-app:0.0.1' }
+        docker { image 'gopikrishnayogeshwar/python-django-app:v1' }
       }
       steps {
-        sh 'docker run -d -p 5001:5001 gopikrishnayogeshwar/flask-app:0.0.1'
+        sh 'docker run -d -p 8000:8000 gopikrishnayogeshwar/python-django-app:v1'
       }
     }
   }
