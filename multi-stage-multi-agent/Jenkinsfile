@@ -22,7 +22,7 @@ pipeline {
         docker { image 'gopikrishnayogeshwar/python-django-app:v3' }
       }
       steps {
-        sh 'sudo docker run -d --entrypoint='' -p 8001:8001 gopikrishnayogeshwar/python-django-app:v3'
+        sh 'sudo docker run -d --entrypoint="" -p 8001:8001 gopikrishnayogeshwar/python-django-app:v3'
       }
     }
   }
