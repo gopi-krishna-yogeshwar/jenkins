@@ -22,6 +22,9 @@ pipeline {
         docker { image 'gopikrishnayogeshwar/python-django-app:v3'
                  args '--entrypoint='
                }
+        steps {
+        sh 'node --version'
+      }
       }
     }
   }
